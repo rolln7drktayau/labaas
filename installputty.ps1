@@ -1,0 +1,3 @@
+az vm extension set --resource-group Rg-poc-bot --vm-name vm-windows-putty --name CustomScriptExtension --publisher Microsoft.Compute --settings '{"fileUris":["https://github.com/rolln7drktayau/labaas/blob/master/deployputty.ps1"],"commandToExecute":"powershell.exe -ExecutionPolicy Unrestricted -File deployputty.ps1"}'
+
+# Failed to connect to MSI. Please make sure MSI is configured correctly. Get Token request returned: <Response [400]>

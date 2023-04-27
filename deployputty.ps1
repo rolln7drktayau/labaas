@@ -16,8 +16,8 @@
 #   --version 1.9 \
 #   --settings '{"fileUris":["https://<storage-account-name>.blob.core.windows.net/<container-name>/<file-name>.ps1"],"commandToExecute":"powershell.exe -ExecutionPolicy Unrestricted -File <file-name>.ps1"}'
 
-$source = "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi"
-# $source = "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.76-installer.msi"
-$output = "C:\Temp\putty-64bit-0.76-installer.msi"
+# $source = "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi"
+$source = "https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe"
+$output = "C:\Temp\putty.exe"
 (New-Object System.Net.WebClient).DownloadFile($source, $output)
 Start-Process -FilePath "msiexec.exe" -ArgumentList "/i C:\Temp\putty-64bit-0.76-installer.msi /quiet /qn /norestart" -Wait
